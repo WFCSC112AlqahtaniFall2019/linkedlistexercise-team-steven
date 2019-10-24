@@ -33,10 +33,10 @@ int main() {
     int min;
     Node * next;
     current=head->getNext();
-    min = head->getValue();
+    min = current->getValue();
     while (current!=nullptr && current->getNext()!= nullptr){
         next = current->getNext();
-        if (current->getValue() > next->getValue()){
+        if (min > next->getValue()){
             min = next->getValue();
         }
         current = current->getNext();
